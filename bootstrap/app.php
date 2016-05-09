@@ -28,17 +28,17 @@ $app = new Illuminate\Foundation\Application(
 
 $app->singleton(
 	'Illuminate\Contracts\Http\Kernel',
-	'pomaray\Http\Kernel'
+	'Pomaray\Http\Kernel'
 );
 
 $app->singleton(
 	'Illuminate\Contracts\Console\Kernel',
-	'pomaray\Console\Kernel'
+	'Pomaray\Console\Kernel'
 );
 
 $app->singleton(
 	'Illuminate\Contracts\Debug\ExceptionHandler',
-	'pomaray\Exceptions\Handler'
+	'Pomaray\Exceptions\Handler'
 );
 
 /*

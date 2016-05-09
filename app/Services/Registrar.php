@@ -1,6 +1,6 @@
-<?php namespace pomaray\Services;
+<?php namespace Pomaray\Services;
 
-use pomaray\User;
+use Pomaray\User;
 use Validator;
 use Illuminate\Contracts\Auth\Registrar as RegistrarContract;
 

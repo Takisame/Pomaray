@@ -1,36 +1,61 @@
-<?php namespace pomaray\Http\Controllers;
+<?php
 
-class HomeController extends Controller {
+namespace Pomaray\Http\Controllers;
 
-	/*
-	|--------------------------------------------------------------------------
-	| Home Controller
-	|--------------------------------------------------------------------------
-	|
-	| This controller renders your application's "dashboard" for users that
-	| are authenticated. Of course, you are free to change or remove the
-	| controller as you wish. It is just here to get your app started!
-	|
-	*/
+use Illuminate\Http\Request;
+use Pomaray\Http\Requests;
+use Mail;
+use Session;
+use Redirect;
+use Pomaray\Gallery;
+use Pomaray\Teacher;
+use DB;
 
-	/**
-	 * Create a new controller instance.
-	 *
-	 * @return void
-	 */
-	public function __construct()
-	{
-		$this->middleware('auth');
-	}
+class HomeController extends Controller
+{
 
-	/**
-	 * Show the application dashboard to the user.
-	 *
-	 * @return Response
-	 */
-	public function index()
-	{
-		return view('home');
-	}
+
+    public function index()
+    {
+        $teachers = Teacher::select(DB::raw('*'))
+                ->orderBy('id', 'desc')
+                 ->paginate(15);
+
+        $files =Gallery::select(DB::raw('*'))
+                ->orderBy('id', 'desc')
+                ->limit(6)
+                 ->get();
+        return view('Home.welcome',compact('teachers','files'));
+    }
+
+     public function store(Request $request)
+     {
+        
+     }
+    public function gallery(Request $request)
+    {
+       $files =Gallery::select(DB::raw('*'))
+                ->orderBy('id', 'desc')
+                 ->paginate(21);
+        if ($request->ajax()) 
+        {
+            if ($request->has('category')) 
+            {
+                if ($request['category'] != '*') 
+                {
+                    $files =Gallery::select(DB::raw('*'))
+                    ->orderBy('id', 'desc')
+                    ->where('category','=',$request['category'])
+                     ->paginate(15);
+                }    
+            }
+            
+            
+            return response()->json(view('Home.files',compact('files'))->render());
+        }
+        return view('Home.gallery',compact('files')); 
+    }
+
+
 
 }

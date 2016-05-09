@@ -1,4 +1,4 @@
-<?php namespace pomaray\Http\Requests;
+<?php namespace Pomaray\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

@@ -1,4 +1,4 @@
-<?php namespace pomaray\Events;
+<?php namespace Pomaray\Events;
 
 abstract class Event {
 

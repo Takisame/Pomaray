@@ -1,4 +1,4 @@
-<?php namespace pomaray\Http\Middleware;
+<?php namespace Pomaray\Http\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Auth\Guard;

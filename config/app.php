@@ -139,11 +139,13 @@ return [
 		/*
 		 * Application Service Providers...
 		 */
-		'pomaray\Providers\AppServiceProvider',
-		'pomaray\Providers\BusServiceProvider',
-		'pomaray\Providers\ConfigServiceProvider',
-		'pomaray\Providers\EventServiceProvider',
-		'pomaray\Providers\RouteServiceProvider',
+		'Pomaray\Providers\AppServiceProvider',
+		'Pomaray\Providers\BusServiceProvider',
+		'Pomaray\Providers\ConfigServiceProvider',
+		'Pomaray\Providers\EventServiceProvider',
+		'Pomaray\Providers\RouteServiceProvider',
+
+		'Collective\Html\HtmlServiceProvider',
 
 	],
 
@@ -192,6 +194,9 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
+
+		'Form' => 'Collective\Html\FormFacade',
+      	'Html' => 'Collective\Html\HtmlFacade',
 
 	],
 

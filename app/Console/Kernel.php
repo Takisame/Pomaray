@@ -1,4 +1,4 @@
-<?php namespace pomaray\Console;
+<?php namespace Pomaray\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -11,7 +11,7 @@ class Kernel extends ConsoleKernel {
 	 * @var array
 	 */
 	protected $commands = [
-		'pomaray\Console\Commands\Inspire',
+		'Pomaray\Console\Commands\Inspire',
 	];
 
 	/**

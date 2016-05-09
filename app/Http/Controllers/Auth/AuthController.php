@@ -1,6 +1,6 @@
-<?php namespace pomaray\Http\Controllers\Auth;
+<?php namespace Pomaray\Http\Controllers\Auth;
 
-use pomaray\Http\Controllers\Controller;
+use Pomaray\Http\Controllers\Controller;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\Registrar;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;

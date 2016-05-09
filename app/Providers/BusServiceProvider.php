@@ -1,4 +1,4 @@
-<?php namespace pomaray\Providers;
+<?php namespace Pomaray\Providers;
 
 use Illuminate\Bus\Dispatcher;
 use Illuminate\Support\ServiceProvider;
@@ -16,7 +16,7 @@ class BusServiceProvider extends ServiceProvider {
 		$dispatcher->mapUsing(function($command)
 		{
 			return Dispatcher::simpleMapping(
-				$command, 'pomaray\Commands', 'pomaray\Handlers\Commands'
+				$command, 'Pomaray\Commands', 'Pomaray\Handlers\Commands'
 			);
 		});
 	}

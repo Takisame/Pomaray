@@ -1,4 +1,4 @@
-<?php namespace pomaray\Providers;
+<?php namespace Pomaray\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

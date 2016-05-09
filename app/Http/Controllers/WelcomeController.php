@@ -1,4 +1,4 @@
-<?php namespace pomaray\Http\Controllers;
+<?php namespace Pomaray\Http\Controllers;
 
 class WelcomeController extends Controller {
 

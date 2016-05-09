@@ -1,4 +1,4 @@
-<?php namespace pomaray\Console\Commands;
+<?php namespace Pomaray\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Inspiring;

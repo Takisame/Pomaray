@@ -1,4 +1,4 @@
-<?php namespace pomaray;
+<?php namespace Pomaray;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;

@@ -1,4 +1,4 @@
-<?php namespace pomaray\Commands;
+<?php namespace Pomaray\Commands;
 
 abstract class Command {
 

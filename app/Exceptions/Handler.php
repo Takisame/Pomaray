@@ -1,4 +1,4 @@
-<?php namespace pomaray\Exceptions;
+<?php namespace Pomaray\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;

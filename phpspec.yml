@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: pomaray
-        psr4_prefix: pomaray
+        namespace: Pomaray
+        psr4_prefix: Pomaray
         src_path: app
